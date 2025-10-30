@@ -25,6 +25,7 @@ Currently targets **armeabi-v7a (32-bit)** only.
 12. Editor uses **Neovim editor** (with autocompletion support)  
 13. Selectable terminal themes  
 14. And more to come
+15.Added create keystore and sign manual
 
 ---
 
