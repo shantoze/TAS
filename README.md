@@ -22,10 +22,11 @@ Currently targets **armeabi-v7a (32-bit)** only.
 11. Free **Gemini AI Assistant (25 Flash)**  
     - Ask about build errors  
     - Ask general questions or chat  
-12. Built-in **Neovim editor** (with autocompletion support)  
+12. Editor uses **Neovim editor** (with autocompletion support)  
 13. Selectable terminal themes  
 14. And more to come
 15. Added features for creating keystores and manual sign, if sign is not defined in build.gradle, then during the release build, you can use those 2 functions
+16. Added features convert aab to apk
 
 ---
 
@@ -36,6 +37,7 @@ Currently targets **armeabi-v7a (32-bit)** only.
 Make sure you have installed and configured:
 
 - Only install **Termux** from github release (thanks to mas `indra` for feedback)
+- For **SDK** you must uses latest version(36) for work or you must set ovveride `aapt2` manual
 - **Termux** (grant storage permission and run `termux-setup-storage`)
 - **CMake** *(optional)* `for build native`
 - **JDK** (via terminal)
