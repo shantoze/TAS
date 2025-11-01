@@ -24,9 +24,9 @@ Currently targets **armeabi-v7a (32-bit)** only.
     - Ask general questions or chat  
 12. Editor uses **Neovim editor** (with autocompletion support)  
 13. Selectable terminal themes  
-14. And more to come
-15. Added features for creating keystores and manual sign, if sign is not defined in build.gradle, then during the release build, you can use those 2 functions
-16. Added features convert aab to apk
+14. Added features for creating keystores and manual sign, if sign is not defined in build.gradle, then during the release build, you can use those 2 functions
+15. Added features convert aab to apk
+16. Added git
 
 ---
 
