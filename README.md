@@ -3,7 +3,7 @@
 **TAS** is a TUI (Text User Interface) project for building Android APKs directly from **Termux**.  
 Inspired by **AndroidIDE**, but designed as a terminal-based tool instead of a GUI.
 
-Currently targets **armeabi-v7a (32-bit)** only.
+Currently targets `Min api 28` **armeabi-v7a (32-bit)** only.
 
 ---
 
@@ -27,6 +27,7 @@ Currently targets **armeabi-v7a (32-bit)** only.
 14. Added features for creating keystores and manual sign, if sign is not defined in build.gradle, then during the release build, you can use those 2 functions
 15. Added features convert aab to apk
 16. Added git
+17. Added install apk
 
 ---
 
