@@ -85,18 +85,23 @@ Save the Android source projects inside that folder.
 ---
 
 ## Screenshots
-<p align="center">
-  <img src="ss/0.png" width="22%" />
-  <img src="ss/1.png" width="22%" />
-  <img src="ss/2.png" width="22%" />
-  <img src="ss/3.png" width="22%" />
-</p>
-<p align="center">
-  <img src="ss/4.png" width="22%" />
-  <img src="ss/5.png" width="22%" />
-  <img src="ss/6.png" width="22%" />
-  <img src="ss/7.png" width="22%" />
-</p>
+<div align="center">
+  <img src="tas/0.png" width="22%" />
+  <img src="tas/1.png" width="22%" />
+  <img src="tas/2.png" width="22%" />
+  <img src="tas/3.png" width="22%" />
+  <img src="tas/4.png" width="22%" />
+  <img src="tas/5.png" width="22%" />
+  <img src="tas/6.png" width="22%" />
+  <img src="tas/7.png" width="22%" />
+  <img src="tas/8.png" width="22%" />
+  <img src="tas/9.png" width="22%" />
+  <img src="tas/91.png" width="22%" />
+  <img src="tas/92.png" width="22%" />
+  <img src="tas/93.png" width="22%" />
+  <img src="tas/94.png" width="22%" />
+  <img src="tas/95.png" width="22%" />
+</div>
 
 ---
 
