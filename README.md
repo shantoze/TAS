@@ -18,7 +18,7 @@ Currently targets `Min api 28` **armeabi-v7a (32-bit)** only.
 7. Control how many CPU cores are used for building  
 8. Safe cache cleaning (remove all build cache and downloaded dependencies)  
 9. Option to manually stop Gradle daemon  
-10. Compact Gradle task view (like Android Studio on PC)  
+10. Compact Gradle task view or full task view  
 11. Free **Gemini AI Assistant (25 Flash)**  
     - Ask about build errors  
     - Ask general questions or chat  
@@ -28,6 +28,11 @@ Currently targets `Min api 28` **armeabi-v7a (32-bit)** only.
 15. Added features convert aab to apk
 16. Added git
 17. Added install apk
+18. Added clean option before build
+19. Added Console option
+20. Added profile report
+20. Added Gradle option `update & backup`
+21. Added more jdk(25) `but still bug for 32 bit` waiting for the latest update from `termux`
 
 ---
 
@@ -111,20 +116,6 @@ Save the Android source projects inside that folder.
 - Easier project management  
 - Access to many extra tools for debugging and error analysis  
 - Fully customizable — easy to extend or modify features  
-
----
-
-## FAQ
-
-**Why 32-bit only (armeabi-v7a)?**  
-Because it focuses on lightweight builds and compatibility with older devices.  
-
-**Why does the build take so long?**  
-It depends on CPU count, RAM size, and JVM settings.  
-
-**Why no layout preview or GUI editing?**  
-Because TAS is TUI-based, not GUI.  
-While Termux GUI can be used, it’s not visually complete or optimal.
 
 ---
 
