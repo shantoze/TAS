@@ -33,6 +33,10 @@ Currently targets `Min api 28` **armeabi-v7a (32-bit)** only.
 20. Added profile report
 20. Added Gradle option `update & backup`
 21. Added more jdk(25) `but still bug for 32 bit` waiting for the latest update from `termux`
+22. Full build process migration to /storage/AppProjects
+23. Updated file management interface (information available)
+24. Added Copy, move, and delete helper
+25. Added Task graph (release, debug, bundle)
 
 ---
 
@@ -42,9 +46,9 @@ Currently targets `Min api 28` **armeabi-v7a (32-bit)** only.
 
 Make sure you have installed and configured:
 
-- Only install **Termux** from github release (thanks to mas `indra` for feedback)
+- Only install **Termux** from github release
 - For **SDK** you must uses latest version(36) for work or you must set ovveride `aapt2` manual
-- **Termux** (grant storage permission and run `termux-setup-storage`)
+- **Termux** (grant storage permission and run `termux-setup-storage`) , uncoment `allow-external-apps = true` in **termux.properties**
 - **CMake** *(optional)* `for build native`
 - **JDK** (via terminal)
 - **NDK** *(optional)*  `for build native`
@@ -83,7 +87,7 @@ Save the Android source projects inside that folder.
    ./TAS
    ```
 4. On first launch:
-   - Choose **option 2** to import the source project to build  
+   - Choose **option 1** to select the source project to build  
    - From the main menu, select **Install Tools** to download required components  
    - Adjust build options, then start the build process
 
@@ -124,3 +128,9 @@ Save the Android source projects inside that folder.
 TAS is made for developers who want to build Android apps entirely from the terminal,  
 without depending on Android Studio’s GUI.  
 It’s practical, flexible, and easy to extend with new features.
+
+---
+
+# Credits
+
+`Mas indra setiawan` (for tester and feedback)
