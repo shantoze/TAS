@@ -37,6 +37,7 @@ Currently targets `Min api 28` **armeabi-v7a (32-bit)** only.
 23. Updated file management interface (information available)
 24. Added Copy, move, and delete helper
 25. Added Task graph (release, debug, bundle)
+26. Added Custom Gradle
 
 ---
 
