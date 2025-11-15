@@ -38,6 +38,7 @@ Currently targets `Min api 28` **armeabi-v7a (32-bit)** only.
 24. Added Copy, move, and delete helper
 25. Added Task graph (release, debug, bundle)
 26. Added Custom Gradle
+27. Aaded APK to AAB with option custom android.jar (**Experimental**)
 
 ---
 
@@ -89,7 +90,7 @@ Save the Android source projects inside that folder.
    ```
 4. On first launch:
    - Choose **option 1** to select the source project to build  
-   - From the main menu, select **Install Tools** to download required components  
+   - From the main menu, select **Install and update** to download required components  
    - Adjust build options, then start the build process
 
 ---
@@ -125,6 +126,7 @@ Save the Android source projects inside that folder.
 ---
 
 ## Notes
+**If you are using the latest version, make sure to run install and update in the menu**
 
 TAS is made for developers who want to build Android apps entirely from the terminal,  
 without depending on Android Studio’s GUI.  
