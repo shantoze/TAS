@@ -9,7 +9,7 @@ Currently targets `Min api 28` **armeabi-v7a (32-bit)** only.
 
 ## Features
 
-1. Automatically select and copy the source project to build  
+1. ~~Automatically select and copy the source project to build~~  
 2. Auto-detect and set the JDK (also automatically updates `build.gradle`)  
 3. Copy built output files (`.apk`, `.aab`)  
 4. Automatically detect the latest versions of JDK, CMake, NDK, Build Tools, etc.  
