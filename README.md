@@ -38,7 +38,7 @@ Currently targets `Min api 28` **armeabi-v7a (32-bit)** only.
 24. Added Copy, move, and delete helper
 25. Added Task graph (release, debug, bundle)
 26. Added Custom Gradle
-27. Aaded APK to AAB with option custom android.jar (**Experimental**)
+27. Added APK to AAB with option custom android.jar (**Experimental**)
 
 ---
 
