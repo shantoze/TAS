@@ -39,6 +39,8 @@ Currently targets `Min api 28` **armeabi-v7a (32-bit)** only.
 25. Added Task graph (release, debug, bundle)
 26. Added Custom Gradle
 27. Added APK to AAB with option custom android.jar (**Experimental**)
+28. Added backup data termux
+29. Added check latest (agp, kgp, gradle wrapper)
 
 ---
 
