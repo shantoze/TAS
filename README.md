@@ -1,77 +1,88 @@
-# TAS (Terminal Android Studio)
+# TAS (Terminal Android Studio) 3.0
 
-**TAS** is a TUI (Text User Interface) project for building Android APKs directly from **Termux**.  
-Inspired by **AndroidIDE**, but designed as a terminal-based tool instead of a GUI.
+**TAS** adalah proyek TUI (*Text User Interface*) untuk membangun APK Android langsung dari **Termux**.  
+Terinspirasi dari **AndroidIDE**, tetapi dirancang sebagai perangkat berbasis terminal alih-alih antarmuka grafis (GUI).
 
-Currently targets `Min api 28` **armeabi-v7a (32-bit)** only.
+Saat ini menargetkan `Min api 28` **armeabi-v7a (32-bit)** saja.
+
+---
+## Diuji pada agp 9.3.1 - kgp 2.4.10 - jdk 21
+---
 
 ---
 
-## Features
+## Fitur
 
-1. ~~Automatically select and copy the source project to build~~  
-2. Auto-detect and set the JDK (also automatically updates `build.gradle`)  
-3. Copy built output files (`.apk`, `.aab`)  
-4. Automatically detect the latest versions of JDK, CMake, NDK, Build Tools, etc.  
-5. Enable/disable build flags such as info, offline mode, build cache, and more  
-6. Custom `aapt2` override support  
-7. Control how many CPU cores are used for building  
-8. Safe cache cleaning (remove all build cache and downloaded dependencies)  
-9. Option to manually stop Gradle daemon  
-10. Compact Gradle task view or full task view  
-11. Free **Gemini AI Assistant (25 Flash)**  
-    - Ask about build errors  
-    - Ask general questions or chat  
-12. Editor uses **Neovim editor** (with autocompletion support)  
-13. Selectable terminal themes  
-14. Added features for creating keystores and manual sign, if sign is not defined in build.gradle, then during the release build, you can use those 2 functions
-15. Added features convert aab to apk
-16. Added git
-17. Added install apk
-18. Added clean option before build
-19. Added Console option
-20. Added profile report
-20. Added Gradle option `update & backup`
-21. Added more jdk(25) `but still bug for 32 bit` waiting for the latest update from `termux`
-22. Full build process migration to /storage/AppProjects
-23. Updated file management interface (information available)
-24. Added Copy, move, and delete helper
-25. Added Task graph (release, debug, bundle)
-26. Added Custom Gradle
-27. Added APK to AAB with option custom android.jar (**Experimental**)
-28. Added backup data termux
-29. Added check latest (agp, kgp, gradle wrapper)
+0. PERBAIKAN BUG
+1. ~~Otomatis memilih dan menyalin proyek sumber untuk di-*build*~~  
+2. Deteksi otomatis dan pengaturan JDK (sekaligus memperbarui `build.gradle` secara otomatis)  
+3. Menyalin file hasil keluaran *build* (`.apk`, `.aab`)  
+4. Deteksi otomatis versi terbaru dari JDK, CMake, NDK, Build Tools, dan lainnya  
+5. Mengaktifkan/menonaktifkan *build flag* seperti info, mode *offline*, *build cache*, dan lainnya  
+6. Dukungan *override* `aapt2` kustom  
+7. Mengontrol jumlah *core* CPU yang digunakan untuk proses *build*  
+8. Pembersihan *cache* yang aman (menghapus semua *cache build* dan dependensi yang diunduh)  
+9. Opsi untuk menghentikan Gradle *daemon* secara manual  
+10. Tampilan *task* Gradle ringkas (*compact*) atau tampilan *task* penuh  
+11. **Asisten Gemini AI Gratis (25 Flash)**  
+    - Bertanya seputar *error build*  
+    - Bertanya secara umum atau mengobrol  
+12. Editor menggunakan **Neovim** (dengan dukungan *autocompletion*)  
+13. Tema terminal yang dapat dipilih  
+14. Penambahan fitur untuk membuat *keystore* dan *sign* manual; jika *sign* belum didefinisikan di `build.gradle`, maka saat *build release*, Anda dapat menggunakan kedua fungsi ini  
+15. Penambahan fitur konversi AAB ke APK  
+16. Penambahan Git  
+17. Penambahan instalasi APK  
+18. Penambahan opsi *clean* sebelum *build*  
+19. Penambahan opsi Konsol  
+20. Penambahan laporan *profile*  
+21. Penambahan opsi Gradle `update & backup`  
+22. Penambahan dukungan lebih banyak JDK (25) *tetapi masih mengalami bug di 32-bit*, menunggu pembaruan terbaru dari `termux`  
+23. Migrasi penuh proses *build* ke `/storage/AppProjects`  
+24. Pembaruan antarmuka manajemen file (informasi tersedia)  
+25. Penambahan helper Salin (*Copy*), Pindah (*Move*), dan Hapus (*Delete*)  
+26. Penambahan Grafik Task (*release*, *debug*, *bundle*)  
+27. Penambahan Gradle Kustom  
+28. Penambahan konversi APK ke AAB dengan opsi `android.jar` kustom (**Eksperimental**)  
+29. Penambahan pencadangan data Termux  
+30. Penambahan pengecekan versi terbaru (agp, kgp, gradle wrapper)  
+31. Penambahan pencadangan *dist* gradle  
+32. Penambahan *formatter* java, kotlin, xml (khusus *layout*)  
+33. Penambahan *auto-translate* bahasa (memperbaiki beberapa *error*)  
+34. Penambahan *deprecated scanner* (java, kotlin, build.gradle.kts) — *eksperimental*  
+35. Penambahan lebih banyak *build flag* (khusus gradle 9.6.1)  
+36. Penambahan `jvmArg` otomatis berdasarkan RAM perangkat (jika mode *auto* diaktifkan)
 
 ---
 
-## Setup
+## Cara Pemasangan (Setup)
 
-### 1. Required Installation
+### 1. Instalasi yang Diperlukan
 
-Make sure you have installed and configured:
+Pastikan Anda sudah menginstal dan mengonfigurasi:
 
-- Only install **Termux** from github release
-- For **SDK** you must uses latest version(36) for work or you must set ovveride `aapt2` manual
-- **Termux** (grant storage permission and run `termux-setup-storage`) , uncoment `allow-external-apps = true` in **termux.properties**
-- **CMake** *(optional)* `for build native`
-- **JDK** (via terminal)
-- **NDK** *(optional)*  `for build native`
+- Hanya instal **Termux** dari rilis GitHub resminya
+- Untuk **SDK**, wajib menggunakan versi terbaru (36) agar berjalan normal, atau Anda harus mengatur *override* `aapt2` secara manual
+- **Termux** (berikan izin penyimpanan dan jalankan `termux-setup-storage`), lalu buka komentar (hapus tanda `#`) pada baris `allow-external-apps = true` di dalam file **termux.properties**
+- **CMake** *(opsional)* `untuk build native`
+- **JDK** (melalui terminal)
+- **NDK** *(opsional)* `untuk build native`
 
-### 2. Project Folder
+### 2. Folder Proyek
 
-Create a folder in your storage to keep all Android project sources:
+Buat folder di penyimpanan Anda untuk menampung semua sumber proyek Android:
 
-```
+```text
 /storage/emulated/0/AppProjects/
 ```
 
-Save the Android source projects inside that folder.
+Simpan proyek-proyek sumber Android di dalam folder tersebut.
 
 ---
 
-## Related Links
+## Tautan Terkait
 
-- [Installer for CMake, SDK, NDK](https://github.com/shantoze/ALONE)  
+- [Installer untuk CMake, SDK, NDK](https://github.com/shantoze/ALONE)  
 - [CMake](https://github.com/shantoze/CFA)  
 - [NDK](https://github.com/HomuHomu833/android-ndk-custom)  
 - [SDK](https://github.com/HomuHomu833/android-sdk-custom)
@@ -79,25 +90,25 @@ Save the Android source projects inside that folder.
 
 ---
 
-## Usage
+## Cara Penggunaan
 
-1. Extract **TAS** and copy it to your Termux home directory  
-2. Give execution permission:
+1. Ekstrak **TAS** dan salin ke direktori *home* Termux Anda  
+2. Berikan izin eksekusi:
    ```bash
    chmod +x TAS
    ```
-3. Run it:
+3. Jalankan:
    ```bash
    ./TAS
    ```
-4. On first launch:
-   - Choose **option 1** to select the source project to build  
-   - From the main menu, select **Install and update** to download required components  
-   - Adjust build options, then start the build process
+4. Pada saat pertama kali diluncurkan:
+   - Pilih **opsi 1** untuk memilih proyek sumber yang akan di-*build*  
+   - Dari menu utama, pilih **Install and update** untuk mengunduh komponen yang diperlukan  
+   - Sesuaikan opsi *build*, lalu mulai proses *build*-nya
 
 ---
 
-## Screenshots
+## Tangkapan Layar (Screenshots)
 <div align="center">
   <img src="tas/0.png" width="22%" />
   <img src="tas/1.png" width="22%" />
@@ -118,24 +129,24 @@ Save the Android source projects inside that folder.
 
 ---
 
-## Why Build in Termux?
+## Mengapa Build di Termux?
 
-- Always up-to-date tools  
-- Easier project management  
-- Access to many extra tools for debugging and error analysis  
-- Fully customizable — easy to extend or modify features  
-
----
-
-## Notes
-**If you are using the latest version, make sure to run install and update in the menu**
-
-TAS is made for developers who want to build Android apps entirely from the terminal,  
-without depending on Android Studio’s GUI.  
-It’s practical, flexible, and easy to extend with new features.
+- Perangkat dan alat selalu diperbarui (*up-to-date*)  
+- Manajemen proyek menjadi lebih mudah  
+- Akses ke banyak perangkat tambahan untuk proses *debugging* dan analisis *error*  
+- Sepenuhnya dapat dikustomisasi — mudah untuk memperluas atau memodifikasi fiturnya  
 
 ---
 
-# Credits
+## Catatan
+**Jika Anda menggunakan versi terbaru, pastikan untuk menjalankan menu Install and update terlebih dahulu.**
 
-`Mas indra setiawan` (for tester and feedback)
+TAS dibuat untuk para pengembang yang ingin membangun aplikasi Android sepenuhnya dari terminal,  
+tanpa bergantung pada GUI.  
+Praktis, fleksibel, dan mudah dikembangkan dengan fitur-fitur baru.
+
+---
+
+# Kredit (Credits)
+
+`Mas Indra Setiawan` (untuk pengujian dan umpan balik/feedback)
